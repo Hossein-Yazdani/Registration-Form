@@ -4,38 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration Form</title>
-    <link rel="stylesheet" href="./Css/app.css">
+    <link rel="stylesheet" href="./Css/reset.css" />
+    <link rel="stylesheet" href="./Css/app.css" />
   </head>
   <body>
-    <container class="container">
-      <div class="nameContainer">
-        <label class="nameLable" for="">First name : </label>
-        <input class="nameInput" type="text" />
+    <div class="mainContainer flex">
+      <div class="container">
+        <div class="inputContainer flex">
+          <div class="firstNme">
+            <label class="firstNameLable" for="firstName">Firstname ...</label>
+            <input class="firstNameInput" type="text" />
+          </div>
+          <div class="lastName">
+            <label class="lastNameLable" for="lastName">Lastname ...</label>
+            <input class="lastNameInput" type="text" />
+          </div>
+        </div>
+        <div class="btnContainer flex">
+          <button class="btn">Submit</button>
+        </div>
       </div>
-      <div class="lastNameContainer">
-        <label class="lastNameLable" for="">Last name : </label>
-        <input class="lastNameInput" type="text" />
-      </div>
-      <div class="selectBoxContainer">
-
-    
-          <select class="selection_box" name="" id="">
-              <option class="selectionBox_option" value="Iran">Iran</option>
-              <option class="selectionBox_option" value="Iraq">Iraq</option>
-              <option class="selectionBox_option" value="Usa">Usa</option>
-              <option class="selectionBox_option" value="France">France</option>
-          </select>
-       
-       
-          <select class="selection_box" name="" id="">
-              <option class="selectionBox_option" value="Mashhad">Mashhad</option>
-              <option class="selectionBox_option" value="Karbala">Karbala</option>
-              <option class="selectionBox_option" value="New york">New york</option>
-              <option class="selectionBox_option" value="Paris">Paris</option>
-          </select>
-      
-      </div>
-    </container>
-    <script src="./Js/app.js"></script>
+    </div>
+    <div class="modalErrorInput">
+      <p>Firstname & Lastname must contain at least 8 char !!!</p>
+    </div>
+    <script src="/Js/app.js"></script>
   </body>
-</html>
+  </html>
+  

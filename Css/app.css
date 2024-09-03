@@ -1,81 +1,145 @@
-html , body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #00E676;
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
 }
-@font-face{
-    font-family: "Roboto";
-    src:url(/Roboto/Roboto-Regular.ttf), format(truetype);
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  background-color: #00695c;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(/Roboto/Roboto-Regular.ttf) format(truetype);
+}
+.mainContainer {
+  height: 100vh;
 }
 .container {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    width: 50%;
-    height: 50%;
-    background: #ffff;
+  width: 50%;
+  height: 30rem;
+  background: #80deea;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
 }
-.nameContainer{
-    margin-left: 10px;
-    padding: 10px;
-    background: #B0BEC5;
-    width: 300px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.lastNameContainer{
-    margin-left: 10px;
-    padding: 10px;
-    background: #B0BEC5;
-    width: 300px;
-    border-radius: 5px;
+.inputContainer {
+  justify-content: space-around;
+  margin-top: 5rem;
 }
-.nameInput,
-.lastNameInput{
-    border: none;
-    outline: none;
-    background: inherit;
+.firstNme {
+  position: relative;
 }
-.nameLable,
-.lastNameLable{
-    color: #EEEEEE;
-    font-family: "Roboto";
-    font-weight: 600;
-    word-spacing:3px;
-    letter-spacing: 2px;
+.firstNameLable {
+  position: absolute;
+  top: -1.4rem;
+  left: 3rem;
+  font-family: Roboto;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  padding: 0.5rem;
+  color: #004d40;
+  background-color: #80deea;
 }
-.selection_box{
-    border: none;
-    outline: none;
-    background: #B0BEC5;
-    font-family: "Roboto";
-    color: #EEEEEE;
-    font-weight: 600;
-    padding: 10px;
-    width: 150px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+.firstNameInput {
+  padding: 0.8rem;
+  width: 25rem;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #80deea;
+  border: 0.4rem solid #00695c;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
 }
-.selectionBox_option{
-    font-family: "Roboto";
-    background: #F5F5F5;
-    color: #212121;
+.lastName {
+  position: relative;
 }
-.selectBoxContainer{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
+.lastNameLable {
+  position: absolute;
+  top: -1.4rem;
+  left: 3rem;
+  font-family: Roboto;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  padding: 0.5rem;
+  color: #004d40;
+  background-color: #80deea;
 }
-
+.lastNameInput {
+  padding: 0.8rem;
+  width: 25rem;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #80deea;
+  border: 0.4rem solid #00695c;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+.btnContainer {
+  margin-top: 3rem;
+}
+.btn {
+  padding: 1rem 2rem;
+  outline: none;
+  border: 0.4rem solid #004d40;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  font-family: Roboto;
+  background: #80deea;
+  color: #004d40;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+  transition: all 250ms ease-in 20ms;
+  -webkit-transition: all 250ms ease-in 20ms;
+  -moz-transition: all 250ms ease-in 20ms;
+  -ms-transition: all 250ms ease-in 20ms;
+  -o-transition: all 250ms ease-in 20ms;
+}
+button.btn:hover {
+  background: #00897b;
+  color: #e0f2f1;
+  border: 0.4rem solid #e0f2f1;
+}
+.modalErrorInput {
+  position: fixed;
+  top: 3rem;
+  right: 52rem;
+  background-color: #fbe9e7;
+  color: #bf360c;
+  border: 0.4rem solid #bf360c;
+  font-size: 2rem;
+  font-family: Roboto;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  width: 45rem;
+  height: 10rem;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  display: none;
+}
